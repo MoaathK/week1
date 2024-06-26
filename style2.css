@@ -6,7 +6,7 @@
 }
 .container1{
     background-color:brown;
-    background-size: auto;
+    background-size: contain;
 }
 .spaced-text {
     margin-bottom: 20px;
