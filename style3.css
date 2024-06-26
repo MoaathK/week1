@@ -28,7 +28,7 @@
 
 .box3 {
     background-color: blue;
-    top: 0;
+    top: 0%;
     left: 0%;
     transform: translate(-100%, -50%);
 }
