@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signin page</title>
+    <script>
+        function checkSignIn(username){
+            if (document.cookie.indexOf(username)!= -1){
+                window.location.href='index.html'
+            }
+        }
+        window.onload =checkSignIn("moath");
+    </script>
+</head>
+<body>
+    <h1>SignIn</h1>
+    <form action="">
+        <label for="fname">Username</label><br>
+        <input type="text" id="username" name="username" required><br>
+        <label for="lname">Password</label><br>
+        <input type="text" id="password" name="password" required><br><br>
+        <input type="submit" value="Submit">
+      </form>
+</body>
+</html>

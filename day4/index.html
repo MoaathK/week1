@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index page</title>
+    <script>
+        users = {user1,user2,user3}
+        function checkSignIn(){
+
+        }
+        window.onload = function() {
+            if (document.cookie.indexOf("username")!= -1){
+                window.location.href = "signin.html";
+
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1 id="welcome">Welcome to the home page</h1>
+    <button type="button" onclick="">Signout</button>
+</body>
+</html>
