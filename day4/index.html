@@ -6,26 +6,29 @@
     <title>index page</title>
     <script>
         function getCookie(name){
-            var value = "; "+document.cookie
-            var parts = value.split("; "+name+"=")
+            var value = "; "+document.cookie;
+            var parts = value.split("; "+name+"=");
             if(parts.length ===2  )return parts.pop().split(";").shift();
         }
         function checkSignIn(){  
             if (document.cookie.indexOf("signin=true") === -1){
-                window.location.href = 'signin.html'
+                window.location.href = 'signin.html';
             }
             else{
-                var username = getCookie("username")
+                var username = getCookie("username");
                 document.getElementById("welcome").innerText = "Hello " +username;
             }
         }
-        window.onload =checkSignIn 
-
-            
+        function signOut(){
+            document.cook = "signin=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+            document.cook = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+            window.location.href = "signin.html";
+        }
+        window.onload =checkSignIn    
     </script>
 </head>
 <body>
     <h1 id="welcome">Welcome to the home page</h1>
-    <button type="button" onclick="">Signout</button>
+    <button type="button" onclick="signOut()">Signout</button>
 </body>
 </html>

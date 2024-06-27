@@ -9,15 +9,15 @@
         function signin(){
             var name = document.getElementById("username").value;
             if(usernames.includes(name)){
-                document.cookie = "signin=true;"
-                document.cookie = ("username="+name)
-                window.location.href ='index.html'
+                document.cookie = "signin=true;  path=/";
+                document.cookie = "username="+name+"; path=/";
+                window.location.href ='index.html';
             }
             
         }
         function checkSignIn(){
             if (document.cookie.indexOf("signin=true") !== -1){
-                window.location.href = 'index.html'
+                window.location.href = 'index.html';
             }
 
         }
