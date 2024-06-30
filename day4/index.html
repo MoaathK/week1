@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>index page</title>
+    <title>Home</title>
     <script>
         function getCookie(name){
             var value = "; "+document.cookie;
@@ -20,8 +20,8 @@
             }
         }
         function signOut(){
-            document.cook = "signin=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-            document.cook = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+            document.cookie = "signin=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+            document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
             window.location.href = "signin.html";
         }
         window.onload =checkSignIn    
@@ -29,6 +29,6 @@
 </head>
 <body>
     <h1 id="welcome">Welcome to the home page</h1>
-    <button type="button" onclick="signOut()">Signout</button>
+    <button onclick="signOut()">Signout</button>
 </body>
 </html>
